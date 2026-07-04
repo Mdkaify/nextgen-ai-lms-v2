@@ -1,5 +1,5 @@
-import Login from "./pages/Login";
+import StudentDashboard from "./pages/StudentDashboard";
 
 export default function App() {
-  return <Login />;
+  return <StudentDashboard />;
 }
