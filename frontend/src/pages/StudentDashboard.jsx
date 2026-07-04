@@ -3,17 +3,15 @@ import Navbar from "../components/Navbar";
 import StatCard from "../components/StatCard";
 import CourseCard from "../components/CourseCard";
 import Leaderboard from "../components/Leaderboard";
+import ProgressChart from "../components/ProgressChart";
 
 export default function StudentDashboard() {
   return (
     <div className="flex bg-gray-100 min-h-screen">
-      {/* Sidebar */}
       <Sidebar />
 
-      {/* Main Content */}
       <main className="flex-1 p-8">
 
-        {/* Navbar */}
         <Navbar />
 
         {/* Welcome */}
@@ -27,32 +25,16 @@ export default function StudentDashboard() {
           </p>
         </div>
 
-        {/* Stat Cards */}
+        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-8">
 
-          <StatCard
-            title="XP Points"
-            value="2450"
-            color="bg-indigo-100"
-          />
+          <StatCard title="XP Points" value="2450" color="bg-indigo-100" />
 
-          <StatCard
-            title="Level"
-            value="12"
-            color="bg-green-100"
-          />
+          <StatCard title="Level" value="12" color="bg-green-100" />
 
-          <StatCard
-            title="Courses"
-            value="8"
-            color="bg-yellow-100"
-          />
+          <StatCard title="Courses" value="8" color="bg-yellow-100" />
 
-          <StatCard
-            title="Badges"
-            value="15"
-            color="bg-pink-100"
-          />
+          <StatCard title="Badges" value="15" color="bg-pink-100" />
 
         </div>
 
@@ -187,6 +169,52 @@ export default function StudentDashboard() {
               <button className="mt-8 bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-xl transition">
                 Claim Reward
               </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Progress Chart + Upcoming Assignments */}
+        <div className="grid lg:grid-cols-2 gap-8 mt-10">
+
+          <ProgressChart />
+
+          <div className="bg-white rounded-2xl shadow-md p-6">
+
+            <h2 className="text-2xl font-bold mb-5">
+              📅 Upcoming Assignments
+            </h2>
+
+            <div className="space-y-4">
+
+              <div className="p-4 bg-indigo-50 rounded-xl">
+                <h3 className="font-semibold">
+                  Machine Learning Assignment
+                </h3>
+                <p className="text-gray-500">
+                  Due: Tomorrow
+                </p>
+              </div>
+
+              <div className="p-4 bg-green-50 rounded-xl">
+                <h3 className="font-semibold">
+                  React Quiz
+                </h3>
+                <p className="text-gray-500">
+                  Due: Friday
+                </p>
+              </div>
+
+              <div className="p-4 bg-yellow-50 rounded-xl">
+                <h3 className="font-semibold">
+                  Java Lab Submission
+                </h3>
+                <p className="text-gray-500">
+                  Due: Monday
+                </p>
+              </div>
 
             </div>
 
